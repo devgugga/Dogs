@@ -9,7 +9,7 @@ export default function Header() {
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
           <Dog />
         </Link>
-        <Link className={styles.login} to="/">
+        <Link className={styles.login} to="/login">
           Login / Criar
         </Link>
       </nav>
