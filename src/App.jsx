@@ -3,16 +3,19 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import { UserStorage } from "./Context/UserContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login/*" element={<Login />} />
-      </Routes>
-      <Footer />
+      <UserStorage>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login/*" element={<Login />} />
+        </Routes>
+        <Footer />
+      </UserStorage>
     </BrowserRouter>
   );
 }
