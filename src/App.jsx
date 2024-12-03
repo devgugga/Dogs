@@ -4,6 +4,8 @@ import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import { UserStorage } from "./Context/UserContext";
+import { ProtectedRoute } from "./Components/Helpers/ProtectedRoute.jsx";
+import { User } from "./Pages/User/index.jsx";
 
 function App() {
   return (
@@ -12,7 +14,15 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login/*" element={<Login />} />
+          <Route path="login/*" element={<Login />} />
+          <Route
+            path="conta/*"
+            element={
+              <ProtectedRoute>
+                <User />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <Footer />
       </UserStorage>

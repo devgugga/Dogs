@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useCallback } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from "../Utils/api";
 import { useNavigate } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export function UserStorage({ children }) {
 
       navigate("/login");
     },
-    [navigate]
+    [navigate],
   );
 
   async function userLogin(username, password) {
@@ -78,6 +78,8 @@ export function UserStorage({ children }) {
         } finally {
           setLoading(false);
         }
+      } else {
+        setLogin(false);
       }
     }
     autoLogin();
