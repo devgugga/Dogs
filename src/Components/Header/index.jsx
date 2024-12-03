@@ -15,7 +15,7 @@ export default function Header() {
         </Link>
         {data ? (
           <Link className={styles.login} to="/conta">
-            {data.nome} <button onClick={userLogout}>Sair</button>
+            {data.nome}
           </Link>
         ) : (
           <Link className={styles.login} to="/login">
