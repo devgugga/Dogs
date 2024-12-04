@@ -1,0 +1,64 @@
+.photoPost {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.preview {
+  border-radius: 1rem;
+
+  background-size: cover;
+  background-position: center center;
+
+  &:after {
+    content: "";
+    display: block;
+
+    height: 0;
+
+    padding-bottom: 100%;
+  }
+}
+
+.file {
+}
+
+.file[type="file"] {
+  display: none;
+}
+
+.fileLabel {
+  margin-bottom: 1rem;
+
+  display: inline-block;
+
+  font-size: 1rem;
+  font-family: var(--type-first);
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 0.4rem;
+
+  background-color: #fea;
+  color: #764701;
+
+  padding: 0.8rem 1.2rem;
+
+  box-sizing: border-box;
+
+  transition: 0.1s;
+
+  min-width: 8rem;
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    box-shadow:
+      0 0 0 3px #e8dcb4,
+      0 0 0 4px #fea;
+  }
+}
