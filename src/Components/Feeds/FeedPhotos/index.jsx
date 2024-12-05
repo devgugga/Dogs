@@ -6,7 +6,7 @@ import Error from "../../Helpers/Error/index.jsx";
 import { Loading } from "../../Helpers/Loading/index.jsx";
 import styles from "./FeedPhotos.module.css";
 
-export function FeedPhotos() {
+export function FeedPhotos({ setModalPhoto }) {
   const { data, loading, error, request } = useFetch();
 
   useEffect(() => {
@@ -23,7 +23,11 @@ export function FeedPhotos() {
     return (
       <ul className={`${styles.feed} animateLeft`}>
         {data.map((photo) => (
-          <FeedPhotosItem key={photo.id} photo={photo} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </ul>
     );
