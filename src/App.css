@@ -44,6 +44,10 @@ input {
   color: #333;
 }
 
+.mainContainer {
+  margin-top: 4rem;
+}
+
 .container {
   max-width: 50rem;
   padding: 0 1rem;

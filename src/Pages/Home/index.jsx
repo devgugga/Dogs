@@ -1,3 +1,9 @@
+import { Feed } from "../../Components/Feeds/Feed/index.jsx";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <section className="container mainContainer">
+      <Feed />
+    </section>
+  );
 }
