@@ -1,0 +1,125 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 6px;
+
+  width: 580px;
+
+  padding: 45px;
+
+  position: relative;
+
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+  z-index: 9999;
+
+  > h2 {
+    margin-bottom: 32px;
+  }
+
+  > p {
+    margin-bottom: 24px;
+  }
+}
+
+.warning {
+  background-color: #ffe9d9;
+
+  margin-bottom: 30px;
+
+  position: relative;
+
+  > p {
+    font-size: 0.9rem;
+    color: #bc4c2e;
+
+    &::before {
+      content: "";
+
+      width: 4px;
+      height: 100%;
+
+      top: 0;
+      left: 0;
+
+      background: #fa703f;
+
+      position: absolute;
+
+      display: inline-block;
+    }
+  }
+
+  > h3 {
+    color: #771505;
+
+    &::before {
+      content: "";
+
+      width: 30px;
+      height: 15px;
+
+      background: url("../../../assets/alert.svg") no-repeat;
+
+      display: inline-block;
+    }
+  }
+
+  > p,
+  h3 {
+    margin: 8px 8px;
+  }
+}
+
+.button {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  background-color: #4caf50;
+  color: white;
+
+  border: none;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: 0.1s;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9998;
+}
+
+.modal_closed {
+  display: none;
+}
+
+@media (max-width: 40rem) {
+  .modal {
+    padding: 25px;
+  }
+}
