@@ -22,9 +22,10 @@ export function WarningModal() {
         <section className={styles.warning}>
           <h3>Aviso</h3>
           <p>
-            Como a API é pública eu não tenho nem um controle sobre as imagens
-            que foi ou serão postadas. A API também exclui as imagens e usuários
-            de 10 em 10 minutos!
+            Por se tratar de uma API pública, não tenho controle sobre as
+            imagens ou comentários que foram ou serão postados. A API realiza
+            uma limpeza automática a cada 10 minutos, excluindo todas as
+            imagens, comentários e dados de usuários do sistema.
           </p>
         </section>
         <button onClick={handleButtonClick} className={styles.button}>
