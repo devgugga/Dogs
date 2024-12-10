@@ -5,6 +5,7 @@ import { UserPhotoPost } from "../../Components/User/UserPhotoPost/index.jsx";
 import { UserStats } from "../../Components/User/UserStats/index.jsx";
 import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext.jsx";
+import { NotFound } from "../NotFound/NotFound.jsx";
 
 export function User() {
   const { data } = useContext(UserContext);
@@ -16,6 +17,7 @@ export function User() {
         <Route path="/" element={<Feed user={data.id} />} />
         <Route path="postar" element={<UserPhotoPost />} />
         <Route path="estatisticas" element={<UserStats />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </section>
   );
