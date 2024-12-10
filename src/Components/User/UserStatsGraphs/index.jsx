@@ -3,7 +3,7 @@ import styles from "./UserStatsGraphs.module.css";
 import { VictoryBar, VictoryChart, VictoryPie } from "victory";
 import PropTypes from "prop-types";
 
-export function UserStatsGraphs({ data }) {
+export default function UserStatsGraphs({ data }) {
   const [graph, setGraph] = useState([]);
   const [total, setTotal] = useState(0);
 
