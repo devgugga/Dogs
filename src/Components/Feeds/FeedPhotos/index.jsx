@@ -5,6 +5,7 @@ import { PHOTOS_GET } from "../../../Utils/api.js";
 import Error from "../../Helpers/Error/index.jsx";
 import { Loading } from "../../Helpers/Loading/index.jsx";
 import styles from "./FeedPhotos.module.css";
+import PropTypes from "prop-types";
 
 export function FeedPhotos({ user, page, setModalPhoto, setInfinite }) {
   const { data, loading, error, request } = useFetch();
@@ -41,3 +42,13 @@ export function FeedPhotos({ user, page, setModalPhoto, setInfinite }) {
     );
   } else return null;
 }
+
+FeedPhotos.propTypes = {
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
+  page: PropTypes.number.isRequired,
+  setModalPhoto: PropTypes.func.isRequired,
+  setInfinite: PropTypes.func.isRequired,
+};

@@ -1,5 +1,7 @@
 import styles from "./Input.module.css";
 
+import PropTypes from "prop-types";
+
 export default function Input({
   label,
   type,
@@ -27,3 +29,13 @@ export default function Input({
     </div>
   );
 }
+
+Input.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  onBlur: PropTypes.func,
+};

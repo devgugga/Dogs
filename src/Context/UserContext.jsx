@@ -2,6 +2,8 @@ import { createContext, useCallback, useEffect, useState } from "react";
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from "../Utils/api";
 import { useNavigate } from "react-router-dom";
 
+import PropTypes from "prop-types";
+
 export const UserContext = createContext();
 
 export function UserStorage({ children }) {
@@ -88,3 +90,7 @@ export function UserStorage({ children }) {
     </UserContext.Provider>
   );
 }
+
+UserStorage.propTypes = {
+  children: PropTypes.node,
+};

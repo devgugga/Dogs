@@ -6,7 +6,9 @@ import { UserContext } from "../../../Context/UserContext.jsx";
 import { PhotoDelete } from "../PhotoDelete/index.jsx";
 import { Image } from "../../Helpers/Image/index.jsx";
 
-export function PhotoContent({ data, single }) {
+import PropTypes from "prop-types";
+
+export function PhotoContent({ data, single = false }) {
   const user = useContext(UserContext);
   const { photo, comments } = data;
 
@@ -38,3 +40,22 @@ export function PhotoContent({ data, single }) {
     </div>
   );
 }
+
+PhotoContent.propTypes = {
+  data: PropTypes.shape({
+    photo: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      acessos: PropTypes.number.isRequired,
+      peso: PropTypes.string.isRequired,
+      idade: PropTypes.string.isRequired,
+      id: PropTypes.oneOfType([
+        PropTypes.string.isRequired,
+        PropTypes.number.isRequired,
+      ]),
+    }).isRequired,
+    comments: PropTypes.array.isRequired,
+  }).isRequired,
+  single: PropTypes.bool,
+};

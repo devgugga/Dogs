@@ -4,8 +4,9 @@ import { useFetch } from "../../../Hooks/useFetch.jsx";
 import { COMMENT_POST } from "../../../Utils/api.js";
 import Error from "../../Helpers/Error/index.jsx";
 import styles from "./PhotoCommentForm.module.css";
+import PropTypes from "prop-types";
 
-export function PhotoCommentsForm({ id, setComments, single }) {
+export function PhotoCommentsForm({ id, setComments, single = false }) {
   const { request, error } = useFetch();
   const token = localStorage.getItem("token");
 
@@ -42,3 +43,12 @@ export function PhotoCommentsForm({ id, setComments, single }) {
     </form>
   );
 }
+
+PhotoCommentsForm.propTypes = {
+  id: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
+  setComments: PropTypes.func.isRequired,
+  single: PropTypes.bool,
+};

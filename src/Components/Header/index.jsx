@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
 
 export default function Header() {
-  const { data, userLogout } = useContext(UserContext);
+  const { data } = useContext(UserContext);
 
   return (
     <header className={styles.header}>

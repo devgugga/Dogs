@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./FeedModal.module.css";
 import { useFetch } from "../../../Hooks/useFetch.jsx";
 import { useEffect } from "react";
@@ -26,3 +27,10 @@ export function FeedModal({ photo, setModalPhoto }) {
     </div>
   );
 }
+
+FeedModal.propTypes = {
+  photo: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+  }).isRequired,
+  setModalPhoto: PropTypes.func.isRequired,
+};

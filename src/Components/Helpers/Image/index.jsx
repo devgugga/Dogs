@@ -1,5 +1,6 @@
 import styles from "./image.module.css";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export function Image({ alt, ...props }) {
   const [skeleton, setSkeleton] = useState(true);
@@ -16,3 +17,7 @@ export function Image({ alt, ...props }) {
     </div>
   );
 }
+
+Image.propTypes = {
+  alt: PropTypes.string.isRequired,
+};
