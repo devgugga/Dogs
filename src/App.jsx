@@ -7,6 +7,7 @@ import { UserStorage } from "./Context/UserContext";
 import { ProtectedRoute } from "./Components/Helpers/ProtectedRoute.jsx";
 import { User } from "./Pages/User/index.jsx";
 import { WarningModal } from "./Components/Helpers/WarningModal/index.jsx";
+import { Photo } from "./Pages/Photo/index.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="foto/:id" element={<Photo />} />
         </Routes>
         <Footer />
       </UserStorage>

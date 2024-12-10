@@ -5,7 +5,7 @@ import { COMMENT_POST } from "../../../Utils/api.js";
 import Error from "../../Helpers/Error/index.jsx";
 import styles from "./PhotoCommentForm.module.css";
 
-export function PhotoCommentsForm({ id, setComments }) {
+export function PhotoCommentsForm({ id, setComments, single }) {
   const { request, error } = useFetch();
   const token = localStorage.getItem("token");
 
@@ -23,7 +23,10 @@ export function PhotoCommentsForm({ id, setComments }) {
   }
 
   return (
-    <form onSubmit={handleOnSubmit} className={styles.form}>
+    <form
+      onSubmit={handleOnSubmit}
+      className={`${styles.form} ${single ? styles.single : null}`}
+    >
       <textarea
         id={comment.comment_ID}
         name="comment"

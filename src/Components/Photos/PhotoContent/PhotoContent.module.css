@@ -27,6 +27,24 @@
   }
 }
 
+.single.photo {
+  grid-template-columns: 1fr;
+
+  height: auto;
+
+  border-radius: 0.4rem;
+}
+
+.single {
+  .img {
+    grid-row: 1;
+  }
+
+  .details {
+    padding: 1rem 0 0 0;
+  }
+}
+
 .img {
   grid-row: 1/4;
 }

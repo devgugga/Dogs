@@ -70,6 +70,10 @@
   }
 }
 
+.form.single {
+  margin: 1rem 0;
+}
+
 @keyframes latir {
   from {
     opacity: 0;
