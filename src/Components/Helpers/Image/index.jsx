@@ -1,4 +1,4 @@
-import styles from "./image.module.css";
+import styles from "./Image.module.css";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
