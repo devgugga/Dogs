@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext.jsx";
 import { useFetch } from "../../../Hooks/useFetch.jsx";
 import Error from "../../Helpers/Error/index.jsx";
+import { Head } from "../../Helpers/Head.jsx";
 
 export default function LoginCreate() {
   const username = useForm();
@@ -32,6 +33,7 @@ export default function LoginCreate() {
 
   return (
     <section className="animeLeft">
+      <Head title="Cadastre-se" />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input

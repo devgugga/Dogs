@@ -4,6 +4,7 @@ import useForm from "../../../Hooks/useForm.jsx";
 import { useFetch } from "../../../Hooks/useFetch.jsx";
 import { PASSWORD_LOST } from "../../../Utils/api.js";
 import Error from "../../Helpers/Error/index.jsx";
+import { Head } from "../../Helpers/Head.jsx";
 
 export default function LoginPasswordLost() {
   const login = useForm("text");
@@ -24,6 +25,7 @@ export default function LoginPasswordLost() {
 
   return (
     <section>
+      <Head title="Perdeu a senha?" />
       <h1 className="title">Perdeu a senha?</h1>
       {data ? (
         <p style={{ color: "green" }}>Email enviado com sucesso</p>

@@ -1,3 +1,5 @@
+import { Head } from "../../Helpers/Head.jsx";
+
 export function UserStats() {
-  return <div>Estatística</div>;
+  return <Head title="Estastíticas" />;
 }
