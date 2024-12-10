@@ -13,7 +13,6 @@ export default function LoginCreate() {
   const password = useForm();
 
   const { userLogin } = useContext(UserContext);
-
   const { loading, error, request } = useFetch();
 
   async function handleSubmit(event) {
@@ -27,6 +26,7 @@ export default function LoginCreate() {
 
     const { response } = await request(url, options);
 
+    console.log(response);
     if (response.ok) userLogin(username.value, password.value);
   }
 
