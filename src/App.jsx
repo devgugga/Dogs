@@ -8,6 +8,7 @@ import { ProtectedRoute } from "./Components/Helpers/ProtectedRoute.jsx";
 import { User } from "./Pages/User/index.jsx";
 import { WarningModal } from "./Components/Helpers/WarningModal/index.jsx";
 import { Photo } from "./Pages/Photo/index.jsx";
+import { UserProfile } from "./Components/User/UserProfile/index.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             }
           />
           <Route path="foto/:id" element={<Photo />} />
+          <Route path="perfil/:user" element={<UserProfile />} />
         </Routes>
         <Footer />
       </UserStorage>
