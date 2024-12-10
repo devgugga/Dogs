@@ -62,3 +62,9 @@
       0 0 0 4px #fea;
   }
 }
+
+@media (max-width: 40rem) {
+  .photoPost {
+    grid-template-columns: 1fr;
+  }
+}

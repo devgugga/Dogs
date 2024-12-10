@@ -41,7 +41,7 @@ export default function LoginPasswordReset() {
   }
 
   return (
-    <section>
+    <section className="animateLeft">
       <Head title="Redefinir Senha" />
       <h1 className="title">Redefinir Senha</h1>
       <form onSubmit={handleSubmit}>
